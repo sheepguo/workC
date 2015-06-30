@@ -12,4 +12,6 @@ initialChainTable.c:创建单向链表并输出以及单链表相关的基本操
 4、插入；
 5、删除；
 
+quickSort:快速排序
 
+factorial:用递归和非递归实现阶乘，并比较运算速度
