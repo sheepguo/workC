@@ -25,11 +25,15 @@ void shellSort(int* list, int len)
 
     //求增量序列
     int     k,t;
-    //int*    dlta;
-
+    int*    dlta;
+    //printf("dlta分配空间前，地址是：%p\n",dlta);
     t   =   (int)(log(len+1)/log(2));
+    //printf("t=%d\n",t);
+    dlta=   (int*) malloc(t*sizeof(int));
+    //printf("dlta分配空间后，地址是：%p\n",dlta);
     //dlta=   (int*) malloc(t*sizeof(int));
-    int dlta[t];
+    //printf("dlta=%p\n",dlta);
+    //int dlta[t];
     for(k=0;k<t;k++)
     {
         dlta[k] =   pow(2,t-k)-1;
@@ -54,18 +58,26 @@ void shellSort(int* list, int len)
     }
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     int     len,i;
     int*    list;
+    //printf("list指针地址：%p\n",list);
     printf("请输入数组长度：");
     scanf("%d",&len);
     printf("请输入数组：");
+    //printf("int大小=%d\n",sizeof(int));
+    list    =   (int*) malloc(len*sizeof(int));
     for(i=0;i<len;i++)
     {
         //printf("记录数据,i=%d\n",i);
         scanf("%d",&list[i]);
     }
+    //printf("1\n");
+    //printf("list指针地址：%p\n",list);
+    
+    //int* temp=(int*) malloc(2*sizeof(int));
+    //printf("temp指针地址：%p\n",temp);
 
     printf("原始数组为---->");
     for(i=0;i<len;i++)
@@ -78,4 +90,5 @@ void main(int argc, char* argv[])
     for(i=0;i<len;i++)
         printf("%d   ",list[i]);
     printf("\n");
+    return 0;
 }    

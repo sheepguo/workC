@@ -51,6 +51,7 @@ void main(int argc, char* argv[])
     int*    list;
     printf("请输入数组长度：");
     scanf("%d",&len);
+    list    =   (int*) malloc(len*sizeof(int));
     printf("请输入数组：");
     for(i=0;i<len;i++)
     {
