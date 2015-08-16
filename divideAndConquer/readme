@@ -5,3 +5,11 @@
 binarySearchMin：找出升序int数组中第一次出现target的位置，可能不存在。
     使用递归和循环两种方法实现该分治
 
+quickSort.c:快排，分治思想，使用递归和循环两种方式实现；
+
+mergeSort.c 归并排序，分治思想，使用递归和循环两种方式实现
+
+eightQuene.c 八皇后问题，三种方法实现
+1、回溯法：solve()
+2、分治思想，递归实现,solve2();
+3、分治思想，循环实现，solve3();

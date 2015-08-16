@@ -24,3 +24,8 @@ straightSelectionSort.c:直接选择排序
 
 heapSort.c：堆排序
 
+sequentialSearch.c:顺序查找
+
+binarySearch.c:折半查找,分别用迭代和递归的方法
+
+secondOptimalSearch:次优查找树查找
